@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Categoria implements Serializable { // significa que os objetos de categoria podem ser convertido em bits,
@@ -23,7 +22,6 @@ public class Categoria implements Serializable { // significa que os objetos de 
 	private Integer id;
 	private String nome;
 	
-	@JsonManagedReference
 	@ManyToMany(mappedBy = "categorias")
 	private List<Produto> produtos = new ArrayList<>();
 
