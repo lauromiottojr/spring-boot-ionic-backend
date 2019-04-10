@@ -19,8 +19,8 @@ public class PedidoResource {
 
 	@RequestMapping(value="/{id}", method=RequestMethod.GET) // metodo GET por padrão para listar, para cadastrar POST, para deletar DELETE
 	// value para que se tiver um id dps de categorias na url, ele entra nesse metodo
-	public ResponseEntity<?> find(@PathVariable Integer id) { // anotação para vincular o valor q vem da url nesse id
-		Pedido obj = service.buscar(id);
+	public ResponseEntity<Pedido> find(@PathVariable Integer id) { // anotação para vincular o valor q vem da url nesse id
+		Pedido obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 	}
 	
