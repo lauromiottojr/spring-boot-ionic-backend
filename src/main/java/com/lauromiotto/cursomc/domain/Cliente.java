@@ -28,7 +28,7 @@ public class Cliente implements Serializable {
 	private String nome;
 	private String email;
 	private String cpfOuCnpj;
-	private Integer tipo; // internamente armazena o tipo como integer, mas externamento como TipoCliente
+	private Integer tipo; // internamente armazena o tipo como integer, mas externamente como TipoCliente
 
 	@OneToMany(mappedBy = "cliente")
 	private List<Endereco> enderecos = new ArrayList<>();
